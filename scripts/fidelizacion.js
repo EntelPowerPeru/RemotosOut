@@ -7,24 +7,22 @@ const EVENTOS = {
             const valorCliente = $("#filtro_cliente").val();
             const valorCanal = $("#filtro_canal").val();
 
-            if (valorCanal === "4") {
-                switch (valorCliente) {
-                    case "1":
-                        $("#tb_nuevo").removeClass("d-none");
-                        $("#tb_entel").addClass("d-none");
-                        break;
-                    case "2":
-                        $("#tb_nuevo").addClass("d-none");
-                        $("#tb_entel").removeClass("d-none");
-                        break;
-                    default:
-                        $("#tb_nuevo").addClass("d-none");
-                        $("#tb_entel").addClass("d-none");
-                }
-            } else {
-                $("#tb_nuevo").addClass("d-none");
-                $("#tb_entel").addClass("d-none");
+            $(".tabla_cliente_canal").addClass("d-none");
+
+            if (!valorCliente || !valorCanal) {
+                return false;
             }
+
+            const cliente = valorCliente === "1" ? "nuevo" : "entel";
+            const canal = valorCanal === "1" ? "claro" : valorCanal === "2" ? "movistar" : valorCanal === "3" ? "bitel" : "regular";
+
+            if (valorCliente === "1") {
+                $(".lbl-transaccion").html("Portabilidad");
+            } else {
+                $(".lbl-transaccion").html("Portabilidad y Venta Regular");
+            }
+
+            $(`#tb_${cliente}_${canal}`).removeClass("d-none");
         });
     }
 };

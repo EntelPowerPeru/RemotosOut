@@ -13,6 +13,14 @@ body {
     text-align: justify;
 }
 
+.text-italic {
+    font-style: italic;
+}
+
+.fw-light {
+    font-weight: 300;
+}
+
 .fs-2r {
     font-size: 2rem;
 }

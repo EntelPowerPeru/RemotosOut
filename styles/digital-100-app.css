@@ -1,0 +1,87 @@
+:root {
+    --main-color: #002EFF;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--main-color);
+    background-image: linear-gradient(147deg, var(--main-color) 0%, var(--main-color) 100%);
+    font-family: Barlow, sans-serif;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.bg-pink {
+    background: #F46C8F;
+    border-radius: 5px;
+    padding: .1rem;
+}
+
+.bg-green {
+    background: #8BF1D1;
+    border-radius: 5px;
+    padding: .1rem;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.card {
+    font-size: .8rem;
+}
+
+.indicador {
+    display: flex;
+    gap: 10px;
+}
+
+.indicador__color {
+    border-radius: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+.indicador__color--pink {
+    background: #F46C8F;
+}
+
+.indicador__color--green {
+    background: #8BF1D1;
+}
+
+.indicador__color--red {
+    background: #7030A0;
+}
+
+.tabla_detalle tbody td {
+    text-align: center;
+    font-weight: bold;
+    width: 20%;
+}
+
+.tabla_detalle th:first-of-type,
+.tabla_detalle td:first-of-type {
+    background: rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    text-align: left;
+}
+
+.back-button {
+    background-color: #42E8B4;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
